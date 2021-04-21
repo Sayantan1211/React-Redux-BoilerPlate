@@ -1,0 +1,39 @@
+// mobile
+@mixin mobile() {
+	@media only screen and (max-width: 767px) {
+		@content;
+	}
+}
+
+// tablet
+@mixin tab() {
+	@media only screen and (max-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 1) {
+		@content;
+	}
+}
+
+@mixin tab_portrait() {
+	@media only screen and (max-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+		@content;
+	}
+}
+
+// variable
+@mixin responsive($min, $max) {
+	@media only screen and (min-width: $min) and (max-width: $max) {
+		@content;
+	}
+}
+
+// shadow
+@mixin shadowDark($x: 0, $y: 0, $spread: 15px, $opacity: 0.15) {
+	-webkit-box-shadow: $x $y $spread 0px rgba(0, 0, 0, $opacity);
+	-moz-box-shadow: $x $y $spread 0px rgba(0, 0, 0, $opacity);
+	box-shadow: $x $y $spread 0px rgba(0, 0, 0, $opacity);
+}
+
+@mixin shadowLight($x: 0, $y: 0, $spread: 15px, $opacity: 0.15) {
+	-webkit-box-shadow: $x $y $spread 0px rgba(255, 255, 255, $opacity);
+	-moz-box-shadow: $x $y $spread 0px rgba(255, 255, 255, $opacity);
+	box-shadow: $x $y $spread 0px rgba(255, 255, 255, $opacity);
+}
