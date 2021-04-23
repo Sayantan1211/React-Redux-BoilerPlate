@@ -5,12 +5,14 @@ import Home from '../pages/home';
 
 const routesList = [
 	{
-		link: '/home',
-		component: Home,
+		link: '/',
+		component: () => {
+			return <Redirect to={'/home'} />;
+		},
 	},
 	{
-		link: '/',
-		component: <Redirect to="/home" />,
+		link: '/home',
+		component: Home,
 	},
 ];
 

@@ -1,10 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initial = {};
+const initialState = {};
 
 const mainSlice = createSlice({
   name: "main",
-  initial,
+  initialState,
   reducers: {
     resetStore: (state, action) => {
       state = {};
