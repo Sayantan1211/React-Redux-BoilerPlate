@@ -1,0 +1,5 @@
+create an excel sheet 10 x 10 which can be expandable to 1000 x 1000
+select and enter value
+
+Part 2: sum operation with cell number
+if cell has no value, consider as 0

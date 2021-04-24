@@ -7,7 +7,7 @@ const mainSlice = createSlice({
   initialState,
   reducers: {
     resetStore: (state, action) => {
-      state = {};
+      state = initialState;
       return state;
     },
   },
